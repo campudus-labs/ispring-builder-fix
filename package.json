@@ -1,0 +1,14 @@
+{
+  "name": "ispringbuilder",
+  "version": "1.0.0",
+  "description": "Removes flickering of iSpring exports from ppt to html5",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Campudus GmbH",
+  "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^0.22.1"
+  }
+}
