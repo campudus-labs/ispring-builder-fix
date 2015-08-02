@@ -1,7 +1,7 @@
 var fs = require('fs-extra');
 var path = require('path');
 
-function fixIndexFileWithDataDirectory(indexHtml, callback) {
+function indexFileFix(indexHtml, callback) {
   var dataDirectory = path.resolve(indexHtml, '../data');
   console.log('data dir = ' + dataDirectory);
   fs.readdir(dataDirectory, function (err, fileList) {
@@ -55,7 +55,7 @@ function fixIndexFileWithDataDirectory(indexHtml, callback) {
 }
 
 function replaceIndex(indexHtml, callback) {
-  fixIndexFileWithDataDirectory(indexHtml, function (err, data) {
+  indexFileFix(indexHtml, function (err, data) {
     if (err) {
       return callback(err);
     }
@@ -65,6 +65,6 @@ function replaceIndex(indexHtml, callback) {
 }
 
 module.exports = {
-  createNewIndexFile : fixIndexFileWithDataDirectory,
+  createNewIndexFile : indexFileFix,
   fixIndexFile : replaceIndex
 };
